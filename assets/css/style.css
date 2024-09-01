@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0F021B;
+  color: #fff;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  padding: 84px 175px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-width: 100vw;
+  min-width: 100dvw;
+}
+
+/*# sourceMappingURL=style.css.map */
