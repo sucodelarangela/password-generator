@@ -1,18 +1,86 @@
-@use 'variables' as v
+@import 'variables'
+@import 'mixins'
+@import 'global'
+@import 'inputs'
 
-*
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-
-body
-  background: v.$bg-primary
-  color: v.$white
+.header
   display: flex
-  font-family: v.$roboto
-  justify-content: center
-  padding: 84px 175px
-  min-height: 100vh
-  min-height: 100dvh
-  min-width: 100vw
-  min-width: 100dvw
+  flex-direction: column
+  align-items: center
+  text-align: center
+  gap: .5rem
+  margin-bottom: 3.5rem
+  &_icon
+    height: 37px
+    margin-bottom: .5rem
+  &_title
+    font-family: $roboto-mono
+    @include font-style (2rem, 700)
+  &_subtitle
+    @include font-style (1.5rem, 400)
+
+.password
+  background: $bg-tertiary
+  border-bottom: 4px solid $pink
+  display: flex
+  align-items: center
+  gap: 2rem
+  margin-bottom: 1.75rem
+  padding: 40px
+  &_label
+    @include font-style (1.25rem, 400, $text-secondary)
+  &_input
+    background: transparent
+    border: none
+    width: 100%
+    @include font-style (2.5rem, 500)
+
+.form
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 2.375rem 4rem
+  background: $bg-secondary
+  border: 1px solid $border
+  padding: 40px 40px 75px
+  &_title
+    grid-column: 1/4
+    font-family: $roboto-mono
+    @include font-style (1.75rem, 500, $text-primary)
+  &_subtitle
+    display: block
+    @include font-style (1.5rem, 500, $text-secondary)
+  &_form-range
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    .charSize
+      background: $bg-tertiary
+      border: 1px solid $border
+      padding: 0.75rem
+      width: 5.25rem
+      @include font-style (1.5rem, 500, $text-secondary)
+  &_fieldset-checkbox
+    display: flex
+    align-items: center
+    gap: 12px
+    margin-bottom: 1rem
+    @include font-style (1.25rem, 500, $text-secondary)
+    &:first-of-type
+      margin-top: 1.5rem
+  &_strength
+    background: $bg-tertiary
+    margin: 1.5rem 0 0.875rem
+    height: 32px
+    width: 100%
+    &-legend
+      display: flex
+      justify-content: space-between
+
+.copy_btn
+  display: block
+  background: $pink
+  border: none
+  border-radius: 2px
+  margin: 36px auto 0
+  padding: 0.625rem
+  @include font-style (1.375rem, 500, $bg-primary)

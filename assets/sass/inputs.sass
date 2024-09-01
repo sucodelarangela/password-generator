@@ -1,0 +1,30 @@
+input
+  font-family: $roboto-mono
+  &[type="range"]
+    -webkit-appearance: none
+    appearance: none
+    width: 100%
+    cursor: pointer
+    outline: none
+    border-radius: 15px
+    height: 10px
+    background: $bg-tertiary
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      height: 28px
+      width: 28px
+      background-color: $white
+      border-radius: 50%
+      border: none
+      transition: .2s ease-in-out
+    &::-moz-range-thumb
+      height: 28px
+      width: 28px
+      background-color: $white
+      border-radius: 50%
+      border: none
+      transition: .2s ease-in-out
+  &[type="checkbox"]
+    width: 24px
+    height: 24px

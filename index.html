@@ -12,7 +12,107 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    teste
+    <header class="header container">
+      <img
+        src="./assets/img/unlock.svg"
+        alt=""
+        aria-hidden="true"
+        class="header_icon"
+      />
+      <h1 class="header_title">Gerador de senhas</h1>
+      <p class="header_subtitle">
+        Gere instantaneamente uma senha aleatória e segura
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="password">
+        <label for="password" class="password_label">senha</label>
+        <input
+          id="password"
+          type="text"
+          class="password_input"
+          value="zcBLsNGX2616"
+          readonly
+        />
+        <button
+          class="icon_btn"
+          aria-label="Copiar senha para a área de transferência"
+        >
+          <img src="./assets/img/copy.svg" alt="" aria-hidden="true" />
+        </button>
+        <button class="icon_btn" aria-label="Atualizar senha">
+          <img src="./assets/img/refresh-cw.svg" alt="" aria-hidden="true" />
+        </button>
+      </section>
+
+      <section>
+        <form class="form">
+          <h2 class="form_title">Personalize sua senha</h2>
+          <div class="form_form-range">
+            <label for="charSize" class="form_subtitle">
+              Número de caracteres
+            </label>
+            <input
+              id="charSize"
+              type="range"
+              min="6"
+              max="18"
+              value="6"
+              step="1"
+            />
+            <input type="text" class="charSize" value="6" readonly />
+          </div>
+
+          <fieldset class="form_fieldset">
+            <legend class="form_subtitle">Características da senha</legend>
+            <div class="form_fieldset-checkbox">
+              <input id="uppercase" name="traits" type="checkbox" />
+              <label for="uppercase">Letras maiúsculas</label>
+            </div>
+            <div class="form_fieldset-checkbox">
+              <input id="lowercase" name="traits" type="checkbox" />
+              <label for="lowercase">Letras minúsculas</label>
+            </div>
+            <div class="form_fieldset-checkbox">
+              <input id="numbers" name="traits" type="checkbox" />
+              <label for="numbers">Números</label>
+            </div>
+            <div class="form_fieldset-checkbox">
+              <input id="symbols" name="traits" type="checkbox" />
+              <label for="symbols">Símbolos</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form_fieldset">
+            <legend class="form_subtitle">Força da senha</legend>
+            <div class="form_strength"></div>
+            <div class="form_strength-legend">
+              <span>Fraca</span>
+              <span>Média</span>
+              <span>Forte</span>
+            </div>
+          </fieldset>
+        </form>
+
+        <button type="button" class="copy_btn">Copiar senha</button>
+      </section>
+    </main>
+
+    <script>
+      const sliderEl = document.querySelector("#charSize");
+      const sliderValue = document.querySelector(".charSize");
+
+      sliderEl.addEventListener("input", (event) => {
+        const tempSliderValue = event.target.value;
+        sliderValue.value = tempSliderValue;
+
+        const progress = ((tempSliderValue - 6) / (sliderEl.max - 6)) * 100;
+
+        sliderEl.style.background = `linear-gradient(to right, #fff ${progress}%, #2C1746 ${progress}%)`;
+      });
+    </script>
   </body>
 </html>
