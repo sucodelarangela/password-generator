@@ -274,6 +274,17 @@ fieldset {
   margin: 1.5rem 0 0.875rem;
   height: 32px;
   width: 100%;
+  position: relative;
+}
+.form_strength::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: var(--width, 0%);
+  background: var(--bgColor);
+  transition: 0.3s;
+  z-index: 10;
 }
 .form_strength-legend {
   display: flex;

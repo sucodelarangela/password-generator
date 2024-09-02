@@ -54,6 +54,16 @@
     margin: 1.5rem 0 0.875rem
     height: 32px
     width: 100%
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      inset: 0
+      height: 100%
+      width: var(--width, 0%)
+      background: var(--bgColor)
+      transition: .3s
+      z-index: 10
     &-legend
       display: flex
       @include font-style (1.125rem, 500, $text-secondary)

@@ -8,6 +8,7 @@ export const elements = {
   lowerCheck: document.querySelector("[data-check='lower']"),
   numberCheck: document.querySelector("[data-check='number']"),
   symbolCheck: document.querySelector("[data-check='symbol']"),
+  strengthBar: document.querySelector("[data-strength"),
   checkboxes: document.querySelectorAll("[data-check]"),
 };
 
@@ -23,7 +24,16 @@ export function displayPassword(password) {
   elements.passwordInput.textContent = password;
 }
 
-export function disableRefreshBtn(disabled) {
-  elements.copyBtn.disabled = disabled;
-  elements.refreshBtn.disabled = disabled;
+export function setStrength(strength) {
+  const data = {
+    weaker: { color: "#E71B32", width: "15%" },
+    weak: { color: "#E71B32", width: "30%" },
+    mediumLow: { color: "#FAF408", width: "50%" },
+    mediumHigh: { color: "#FAF408", width: "70%" },
+    strong: { color: "#00FF85", width: "80%" },
+    stronger: { color: "#00FF85", width: "100%" },
+  };
+
+  elements.strengthBar.style.setProperty("--width", data[strength].width);
+  elements.strengthBar.style.setProperty("--bgColor", data[strength].color);
 }
