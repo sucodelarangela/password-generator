@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #0F021B;
+  background: #0f021b;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -46,49 +46,6 @@ fieldset {
   max-width: 1089px;
 }
 
-.icon_btn {
-  background: transparent;
-  border: none;
-  height: 2.5rem;
-  aspect-ratio: 1/1;
-}
-
-input {
-  font-family: "Roboto Mono", monospace;
-}
-input[type=range] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  border-radius: 15px;
-  height: 10px;
-  background: #2C1746;
-}
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 28px;
-  width: 28px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: none;
-  transition: 0.2s ease-in-out;
-}
-input[type=range]::-moz-range-thumb {
-  height: 28px;
-  width: 28px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: none;
-  transition: 0.2s ease-in-out;
-}
-input[type=checkbox] {
-  width: 24px;
-  height: 24px;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -117,10 +74,6 @@ input[type=checkbox] {
 @media screen and (min-width: 768px) {
   .header_title {
     font-size: 2rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .header_subtitle {
@@ -133,16 +86,12 @@ input[type=checkbox] {
 @media screen and (min-width: 768px) {
   .header_subtitle {
     font-size: 1.5rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 
 .password {
-  background: #2C1746;
-  border-bottom: 4px solid #FD58FF;
+  background: #2c1746;
+  border-bottom: 4px solid #fd58ff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -165,17 +114,13 @@ input[type=checkbox] {
 .password_label {
   font-size: 1rem;
   font-weight: 400;
-  color: #8A87AA;
+  color: #8a87aa;
   letter-spacing: normal;
   line-height: normal;
 }
 @media screen and (width >= 1024px) {
   .password_label {
     font-size: 1.25rem;
-    font-weight: 400;
-    color: #8A87AA;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .password_input {
@@ -191,10 +136,6 @@ input[type=checkbox] {
 @media screen and (width >= 1024px) {
   .password_input {
     font-size: 2.5rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .password_actions {
@@ -202,6 +143,21 @@ input[type=checkbox] {
   justify-content: space-around;
   gap: 2rem;
   width: 100%;
+}
+.password_actions .icon_btn {
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  padding: 4px;
+  transition: 0.3s;
+}
+.password_actions .icon_btn img {
+  height: 2rem;
+}
+.password_actions .icon_btn:hover {
+  background: rgba(253, 88, 255, 0.2);
 }
 @media screen and (min-width: 768px) {
   .password_actions {
@@ -214,7 +170,7 @@ input[type=checkbox] {
   grid-template-columns: 1fr;
   gap: 2rem;
   background: #180828;
-  border: 1px solid #694A81;
+  border: 1px solid #694a81;
   padding: 24px 24px 75px;
 }
 @media screen and (min-width: 768px) {
@@ -234,7 +190,7 @@ input[type=checkbox] {
   font-family: "Roboto Mono", monospace;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #D7D5EB;
+  color: #d7d5eb;
   letter-spacing: normal;
   line-height: normal;
 }
@@ -242,27 +198,19 @@ input[type=checkbox] {
   .form_title {
     grid-column: 1/3;
     font-size: 1.75rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .form_subtitle {
   display: block;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #8A87AA;
+  color: #8a87aa;
   letter-spacing: normal;
   line-height: normal;
 }
 @media screen and (width >= 1024px) {
   .form_subtitle {
     font-size: 1.5rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .form_range {
@@ -280,24 +228,20 @@ input[type=checkbox] {
     grid-column: 1;
   }
 }
-.form_range .charSize {
-  background: #2C1746;
-  border: 1px solid #694A81;
+.form_range .charLength {
+  background: #2c1746;
+  border: 1px solid #694a81;
   padding: 0.75rem;
   width: 5.25rem;
   font-size: 1.125rem;
   font-weight: 500;
-  color: #8A87AA;
+  color: #8a87aa;
   letter-spacing: normal;
   line-height: normal;
 }
 @media screen and (width >= 1024px) {
-  .form_range .charSize {
+  .form_range .charLength {
     font-size: 1.5rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .form_fieldset-checkbox {
@@ -307,24 +251,20 @@ input[type=checkbox] {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   font-weight: 500;
-  color: #8A87AA;
+  color: #8a87aa;
   letter-spacing: normal;
   line-height: normal;
 }
 @media screen and (width >= 1024px) {
   .form_fieldset-checkbox {
     font-size: 1.25rem;
-    font-weight: 500;
-    color: #8A87AA;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 .form_fieldset-checkbox:first-of-type {
   margin-top: 1.5rem;
 }
 .form_strength {
-  background: #2C1746;
+  background: #2c1746;
   margin: 1.5rem 0 0.875rem;
   height: 32px;
   width: 100%;
@@ -333,7 +273,7 @@ input[type=checkbox] {
   display: flex;
   font-size: 1.125rem;
   font-weight: 500;
-  color: #8A87AA;
+  color: #8a87aa;
   letter-spacing: normal;
   line-height: normal;
   justify-content: space-between;
@@ -341,33 +281,65 @@ input[type=checkbox] {
 @media screen and (width >= 1024px) {
   .form_strength-legend {
     font-size: 1.25rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
+}
+
+input {
+  font-family: "Roboto Mono", monospace;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 10px;
+  background: #2c1746;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 28px;
+  width: 28px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+input[type="range"]::-moz-range-thumb {
+  height: 28px;
+  width: 28px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
 }
 
 .copy_btn {
   display: block;
-  background: #FD58FF;
+  background: #fd58ff;
   border: none;
   border-radius: 2px;
   margin: 36px auto 0;
   padding: 0.625rem;
+  transition: 0.3s;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #0F021B;
+  color: #0f021b;
   letter-spacing: normal;
   line-height: normal;
+}
+.copy_btn:hover {
+  background: #d500d8;
 }
 @media screen and (width >= 1024px) {
   .copy_btn {
     font-size: 1.375rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
 

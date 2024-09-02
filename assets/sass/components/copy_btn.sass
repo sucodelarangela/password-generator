@@ -1,0 +1,13 @@
+.copy_btn
+  display: block
+  background: $pink
+  border: none
+  border-radius: 2px
+  margin: 36px auto 0
+  padding: 0.625rem
+  transition: .3s
+  @include font-style (1.25rem, 500, $bg-primary)
+  &:hover
+    background: darken($pink, 25%)
+  @include desktop
+    font-size: 1.375rem
