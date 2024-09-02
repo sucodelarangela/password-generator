@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
 
   <body>
@@ -68,11 +73,12 @@
               data-char="slider"
             />
             <input
-              type="text"
+              type="number"
+              min="6"
+              max="18"
               class="charLength"
-              value="12"
-              readonly
               data-char="input"
+              readonly
             />
           </div>
 
@@ -131,10 +137,14 @@
           </fieldset>
         </form>
 
-        <button type="button" class="copy_btn">Copiar senha</button>
+        <button type="button" class="copy_btn" data-copy>Copiar senha</button>
       </section>
     </main>
 
     <script type="module" src="./assets/js/index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>

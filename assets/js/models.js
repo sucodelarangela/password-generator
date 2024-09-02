@@ -59,3 +59,11 @@ export function generatePassword(properties) {
 
   return password.slice(0, length);
 }
+
+export async function copyPasswordToClipboard(password) {
+  await navigator.clipboard.writeText(password);
+  Toastify({
+    text: "Senha copiada para a área de transferência.",
+    style: { background: "#2C1746" },
+  }).showToast();
+}

@@ -23,12 +23,18 @@ function handleSliderChange() {
   init();
 }
 
+function copyPassword() {
+  const password = v.elements.passwordInput.textContent;
+  m.copyPasswordToClipboard(password);
+}
+
 function addEventListeners() {
   v.elements.refreshBtn.addEventListener("click", init);
   v.elements.lengthSlider.addEventListener("input", handleSliderChange);
-  v.elements.checkboxes.forEach((box) => {
-    box.addEventListener("change", init);
-  });
+  v.elements.checkboxes.forEach((box) => box.addEventListener("change", init));
+  v.elements.copyBtns.forEach((btn) =>
+    btn.addEventListener("click", copyPassword)
+  );
 }
 
 export function getPasswordStrength(password) {

@@ -1,6 +1,6 @@
 export const elements = {
   passwordInput: document.querySelector("[data-password]"),
-  copyBtn: document.querySelector("[data-copy]"),
+  copyBtns: document.querySelectorAll("[data-copy]"),
   refreshBtn: document.querySelector("[data-refresh]"),
   lengthSlider: document.querySelector("[data-char='slider']"),
   lengthInput: document.querySelector("[data-char='input']"),
