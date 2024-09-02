@@ -15,11 +15,21 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  padding: 84px 175px;
+  padding: 32px;
   min-height: 100vh;
   min-height: 100dvh;
   min-width: 100vw;
   min-width: 100dvw;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding: 84px;
+  }
+}
+@media screen and (width >= 1024px) {
+  body {
+    padding: 84px 175px;
+  }
 }
 
 button {
@@ -85,7 +95,12 @@ input[type=checkbox] {
   align-items: center;
   text-align: center;
   gap: 0.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
+}
+@media screen and (width >= 1024px) {
+  .header {
+    margin-bottom: 3.5rem;
+  }
 }
 .header_icon {
   height: 37px;
@@ -93,98 +108,217 @@ input[type=checkbox] {
 }
 .header_title {
   font-family: "Roboto Mono", monospace;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: normal;
   line-height: normal;
 }
+@media screen and (min-width: 768px) {
+  .header_title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+}
 .header_subtitle {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #fff;
   letter-spacing: normal;
   line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .header_subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
 }
 
 .password {
   background: #2C1746;
   border-bottom: 4px solid #FD58FF;
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 1.75rem;
-  padding: 40px;
+  padding: 24px;
+}
+@media screen and (min-width: 768px) {
+  .password {
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (width >= 1024px) {
+  .password {
+    padding: 40px;
+  }
 }
 .password_label {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #8A87AA;
   letter-spacing: normal;
   line-height: normal;
 }
+@media screen and (width >= 1024px) {
+  .password_label {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #8A87AA;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+}
 .password_input {
   background: transparent;
   border: none;
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
   letter-spacing: normal;
   line-height: normal;
 }
+@media screen and (width >= 1024px) {
+  .password_input {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+}
+.password_actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .password_actions {
+    width: auto;
+  }
+}
 
 .form {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.375rem 4rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   background: #180828;
   border: 1px solid #694A81;
-  padding: 40px 40px 75px;
+  padding: 24px 24px 75px;
+}
+@media screen and (min-width: 768px) {
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.375rem 4rem;
+    padding: 40px 40px 75px;
+  }
+}
+@media screen and (width >= 1024px) {
+  .form {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .form_title {
-  grid-column: 1/4;
+  grid-column: 1;
   font-family: "Roboto Mono", monospace;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #D7D5EB;
   letter-spacing: normal;
   line-height: normal;
 }
+@media screen and (min-width: 768px) {
+  .form_title {
+    grid-column: 1/3;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+}
 .form_subtitle {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #8A87AA;
   letter-spacing: normal;
   line-height: normal;
 }
-.form_form-range {
+@media screen and (width >= 1024px) {
+  .form_subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+}
+.form_range {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.form_form-range .charSize {
+@media screen and (min-width: 768px) {
+  .form_range {
+    grid-column: 1/3;
+  }
+}
+@media screen and (width >= 1024px) {
+  .form_range {
+    grid-column: 1;
+  }
+}
+.form_range .charSize {
   background: #2C1746;
   border: 1px solid #694A81;
   padding: 0.75rem;
   width: 5.25rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #8A87AA;
   letter-spacing: normal;
   line-height: normal;
+}
+@media screen and (width >= 1024px) {
+  .form_range .charSize {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
 }
 .form_fieldset-checkbox {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #8A87AA;
   letter-spacing: normal;
   line-height: normal;
+}
+@media screen and (width >= 1024px) {
+  .form_fieldset-checkbox {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #8A87AA;
+    letter-spacing: normal;
+    line-height: normal;
+  }
 }
 .form_fieldset-checkbox:first-of-type {
   margin-top: 1.5rem;
@@ -197,7 +331,21 @@ input[type=checkbox] {
 }
 .form_strength-legend {
   display: flex;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #8A87AA;
+  letter-spacing: normal;
+  line-height: normal;
   justify-content: space-between;
+}
+@media screen and (width >= 1024px) {
+  .form_strength-legend {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
 }
 
 .copy_btn {
@@ -207,11 +355,20 @@ input[type=checkbox] {
   border-radius: 2px;
   margin: 36px auto 0;
   padding: 0.625rem;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #0F021B;
   letter-spacing: normal;
   line-height: normal;
+}
+@media screen and (width >= 1024px) {
+  .copy_btn {
+    font-size: 1.375rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: normal;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

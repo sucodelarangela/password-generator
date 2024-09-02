@@ -4,3 +4,11 @@
   color: $color
   letter-spacing: $spacing
   line-height: $lineheight
+
+@mixin tablet
+  @media screen and (min-width: 768px)
+    @content
+
+@mixin desktop
+  @media screen and (width >= 1024px)
+    @content

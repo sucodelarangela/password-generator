@@ -13,11 +13,15 @@ body
   flex-direction: column
   align-items: center
   font-family: $roboto
-  padding: 84px 175px
+  padding: 32px
   min-height: 100vh
   min-height: 100dvh
   min-width: 100vw
   min-width: 100dvw
+  @include tablet
+    padding: 84px
+  @include desktop
+    padding: 84px 175px
 
 button
   font-family: $roboto

@@ -34,24 +34,31 @@
           id="password"
           type="text"
           class="password_input"
-          value="zcBLsNGX2616"
+          value="zcBLsNGX2616ABCD"
           readonly
         />
-        <button
-          class="icon_btn"
-          aria-label="Copiar senha para a área de transferência"
-        >
-          <img src="./assets/img/copy.svg" alt="" aria-hidden="true" />
-        </button>
-        <button class="icon_btn" aria-label="Atualizar senha">
-          <img src="./assets/img/refresh-cw.svg" alt="" aria-hidden="true" />
-        </button>
+        <div class="password_actions">
+          <button
+            class="icon_btn"
+            title="Copiar senha para a área de transferência"
+            aria-label="Copiar senha para a área de transferência"
+          >
+            <img src="./assets/img/copy.svg" alt="" aria-hidden="true" />
+          </button>
+          <button
+            class="icon_btn"
+            title="Atualizar senha"
+            aria-label="Atualizar senha"
+          >
+            <img src="./assets/img/refresh-cw.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
       </section>
 
       <section>
         <form class="form">
           <h2 class="form_title">Personalize sua senha</h2>
-          <div class="form_form-range">
+          <div class="form_range">
             <label for="charSize" class="form_subtitle">
               Número de caracteres
             </label>
