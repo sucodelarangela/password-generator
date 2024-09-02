@@ -59,5 +59,4 @@ export function getPasswordStrength(password) {
 
 addEventListeners();
 handleSliderChange();
-handleCheckboxChange();
 init();
