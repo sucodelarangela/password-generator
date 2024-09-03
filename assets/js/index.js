@@ -48,7 +48,7 @@ export function getPasswordStrength(password) {
     v.elements.symbolCheck.checked || v.elements.numberCheck.checked;
   const length = password.length;
 
-  if (!fieldsSelected) return v.setStrength("weaker");
+  if (!fieldsSelected || fieldsSelected === 1) return v.setStrength("weaker");
 
   if (fieldsSelected <= 2 && (onlyLetters || onlyNumbersOrsymbols)) {
     return v.setStrength(length < 12 ? "weaker" : "weak");
@@ -56,6 +56,10 @@ export function getPasswordStrength(password) {
 
   if (fieldsSelected === 3 && onlyLetters && numberOrSymbol) {
     return v.setStrength(length < 12 ? "mediumLow" : "mediumHigh");
+  }
+
+  if (fieldsSelected === 3 && !onlyLetters && onlyNumbersOrsymbols) {
+    return v.setStrength(length < 12 ? "weak" : "mediumLow");
   }
 
   if (fieldsSelected === 4) {

@@ -122,10 +122,8 @@ fieldset {
   }
 }
 .password_input {
-  background: transparent;
-  border: none;
-  flex-wrap: wrap;
-  word-wrap: break-word;
+  font-family: "Roboto Mono", monospace;
+  word-break: break-all;
   width: 100%;
   font-size: 1.5rem;
   font-weight: 500;
