@@ -12,6 +12,9 @@ export const elements = {
   checkboxes: document.querySelectorAll("[data-check]"),
 };
 
+/*
+  Determina a largura e cor do input range customizado de acordo com o valor selecionado
+*/
 export function updateSlider(length) {
   elements.lengthInput.value = length;
 
@@ -20,10 +23,16 @@ export function updateSlider(length) {
   elements.lengthSlider.style.background = `linear-gradient(to right, #fff ${progress}%, #2C1746 ${progress}%)`;
 }
 
+/*
+  Mostra a senha no elemento apropriado
+*/
 export function displayPassword(password) {
   elements.passwordInput.textContent = password;
 }
 
+/*
+  Mapeia cor e largura da força de senha e atribui tais valores ao elemento correspondente
+*/
 export function setStrength(strength) {
   const data = {
     weaker: { color: "#E71B32", width: "15%" },

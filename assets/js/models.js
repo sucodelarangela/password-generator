@@ -6,43 +6,46 @@ export const properties = {
   hasSymbol: true,
 };
 
+/*
+  Funções para gerar caracteres aleatórios
+*/
 export function getRandomLowerCase() {
-  // letras lowercase de 97 a 122
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
 export function getRandomUpperCase() {
-  // letras uppercase de 65 a 90
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
 export function getRandomNumbers() {
-  // números de 48 a 57
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
 export function getRandomSymbols() {
-  // símbolos fáceis de acessar pelo teclado
   const symbols = "!@#$%^&*(){}[]=<>/,.";
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
+/*
+  Geração de senha
+*/
 export function generatePassword(properties) {
   const { length, hasUpper, hasLower, hasNumber, hasSymbol } = properties;
 
   let password = "";
 
-  const typeCount = hasUpper + hasLower + hasNumber + hasSymbol;
+  // Definindo a quantidade de características que a senha deve ter
+  const propertyCount = hasUpper + hasLower + hasNumber + hasSymbol;
 
-  const typesArr = [
+  // Filtra as propriedades, mantendo apenas as que forem `true`
+  const propertiesArr = [
     { upper: hasUpper },
     { lower: hasLower },
     { number: hasNumber },
     { symbol: hasSymbol },
-  ].filter((type) => Object.values(type)[0]);
+  ].filter((property) => Object.values(property)[0]);
 
-  if (typeCount === 0) return "";
-
+  // Object map para as funções de geração de caracteres
   const randomFns = {
     lower: getRandomLowerCase,
     upper: getRandomUpperCase,
@@ -50,16 +53,21 @@ export function generatePassword(properties) {
     symbol: getRandomSymbols,
   };
 
-  for (let i = 0; i < length; i += typeCount) {
-    typesArr.forEach((type) => {
-      const fnName = Object.keys(type)[0];
+  // Para cada iteração, verifica cada propriedade de senha e gera um caractere aleatório para a senha
+  for (let i = 0; i < length; i += propertyCount) {
+    propertiesArr.forEach((property) => {
+      const fnName = Object.keys(property)[0];
       password += randomFns[fnName]();
     });
   }
 
+  // Retorna a senha gerada limitada ao número de caracteres selecionado pelo usuário
   return password.slice(0, length);
 }
 
+/*
+  Copia a senha para a área de transferência e mostra um toast de confirmação
+*/
 export async function copyPasswordToClipboard(password) {
   await navigator.clipboard.writeText(password);
   Toastify({
