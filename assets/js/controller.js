@@ -65,6 +65,9 @@ export function getPasswordStrength(password) {
 
   if (!fieldsSelected || fieldsSelected === 1) return v.setStrength("weaker");
 
+  if (fieldsSelected <= 2 && (!onlyLetters || onlyNumbersOrsymbols))
+    return v.setStrength("weaker");
+
   if (fieldsSelected <= 2 && (onlyLetters || onlyNumbersOrsymbols)) {
     return v.setStrength(length < 12 ? "weaker" : "weak");
   }
