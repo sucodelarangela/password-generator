@@ -37,6 +37,8 @@ Diferenciais:
 - Uso de Sass
 - Boa documentação
 
+> _**Nota:** Visto que os requisitos não especificam frameworks ou bibliotecas a serem utilizadas (Vue, Angular, React, etc.), e que a avaliação se dá na análise de HTML, CSS e JavaScript, optei por desenvolver um projeto "vanilla" para que o uso do JavaScript seja puro e não seja ofuscado por métodos específicos de outras tecnologias._
+
 ## 🖥️ Requisitos do projeto
 
 Trata-se de um **gerador de senhas** com controle de número de caracteres, características da senha e força da senha.
@@ -81,6 +83,13 @@ Já o segundo botão gera uma nova senha com base nas características atualment
 ## 📝 Notas da desenvolvedora
 
 O projeto possui responsividade com estilos no padrão _mobile first_ para as telas _mobile_ (até `767px`), _tablet_ (de `768px` a `1023px`) e _desktop_ (a partir de `1024px`).
+
+Os arquivos JavaScript do projeto foram organizados seguindo uma premissa similar ao <abbr title="Model View Controller">MVC</abbr>, onde:
+
+- `models.js`: contém as lógicas para as regras de negócio;
+- `views.js`: lida com a visualização e atualização dos elementos no DOM;
+- `controller.js`: lida com as interações do usuário e serve de intermediador entre `models` e `views`;
+- `index.js`: _entry point_ onde importamos os métodos inicializadores da aplicação.
 
 Os requisitos de projeto não indicam os valores mínimo e máximo para o número de caracteres. Portanto, inicialmente considerei um valor mínimo de 6 (seis) e máximo de 18 (dezoito) caracteres, considerando que, no Figma, o _slider_ na metade indica o valor 12 (doze). No entanto, após testes de usabilidade com alguns usuários, a maioria indicou que gostaria da possibilidade de criar senhas mais longas, o que levou à versão final com valor máximo de 40 (quarenta) caracteres.
 
