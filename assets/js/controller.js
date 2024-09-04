@@ -30,21 +30,6 @@ export function handleSliderChange() {
 }
 
 /*
-  Lida com a escolha de número de caracteres via teclado
-*/
-export function handleInputChange(event) {
-  if (
-    event.key !== "ArrowUp" &&
-    event.key !== "ArrowDown" &&
-    event.key !== "Tab"
-  ) {
-    event.preventDefault();
-  }
-  v.elements.lengthSlider.value = event.target.value;
-  handleSliderChange();
-}
-
-/*
   Captura a senha e chama a função de cópia para a área de transferência
 */
 function copyPassword() {
@@ -58,7 +43,6 @@ function copyPassword() {
 export function addEventListeners() {
   v.elements.refreshBtn.addEventListener("click", init);
   v.elements.lengthSlider.addEventListener("input", handleSliderChange);
-  v.elements.lengthInput.addEventListener("input", handleInputChange);
   v.elements.checkboxes.forEach((box) => box.addEventListener("change", init));
   v.elements.copyBtns.forEach((btn) =>
     btn.addEventListener("click", copyPassword)
