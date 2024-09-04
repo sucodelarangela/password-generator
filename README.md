@@ -66,9 +66,7 @@ Ao acessar o **Gerador de Senhas**, a aplicação automaticamente criará uma se
 
 ![Configurações iniciais](./assets/img/initial-setup.png)
 
-É possível alterar o número de caracteres deslizando o _slider_ para a esquerda ou para a direita, sendo 6 (seis) o valor **mínimo**, e 40 (quarenta) o valor **máximo**. O número de caracteres selecionado pode ser visualizado no campo abaixo do _slider_.
-
-Também é possível alterar o número de caracteres utilizando as teclas `ArrowUp` e `ArrowDown` do teclado quando campo abaixo do _slider_ estiver selecionado. Dessa forma, torna-se possível a interação por teclado, visto que o _slider_ não pode ser acessado via `Tab`.
+É possível alterar o número de caracteres deslizando o _slider_ para a esquerda ou para a direita, sendo 6 (seis) o valor **mínimo**, e 40 (quarenta) o valor **máximo**. O número de caracteres selecionado pode ser visualizado no campo abaixo do _slider_. Também é possível alterar o número de caracteres utilizando as teclas de setas do teclado quando o _slider_ estiver selecionado via `Tab`.
 
 > _A senha gerada e a força da senha são atualizadas em tempo real sempre que qualquer uma das propriedades for alterada._
 

@@ -14,20 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-family: "Roboto", sans-serif;
   padding: 32px;
   min-height: 100vh;
   min-height: 100dvh;
-}
-@media screen and (min-width: 768px) {
-  body {
-    padding: 84px;
-  }
-}
-@media screen and (width >= 1024px) {
-  body {
-    padding: 84px 175px;
-  }
 }
 
 button {
@@ -305,7 +296,6 @@ input[type=range] {
   appearance: none;
   width: 100%;
   cursor: pointer;
-  outline: none;
   border-radius: 15px;
   height: 10px;
   background: #2C1746;
